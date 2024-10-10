@@ -9,7 +9,7 @@ module.exports = {
           sans: ['Raleway', 'sans-serif'],
         },
         backgroundImage: {
-            'img-home': "linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),url('Utils/HOME.jpg')"
+            'img-home': "linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),url('Utils/HOME.svg')"
           },
         fontSize: {
         },
