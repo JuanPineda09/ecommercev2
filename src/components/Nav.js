@@ -1,3 +1,4 @@
+import React from 'react';
 import logo from "../Utils/Logo.svg";
 import purchaseCar from "../Utils/cart-solid-240 1.svg";
 import user from "../Utils/bxs-user-circle.svg"
