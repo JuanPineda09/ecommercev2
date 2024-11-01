@@ -3,6 +3,7 @@ import logo from "../Utils/Logo.svg";
 import purchaseCar from "../Utils/cart-solid-240 1.svg";
 import user from "../Utils/bxs-user-circle.svg"
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 
 const Nav =()=>{
@@ -34,7 +35,8 @@ const Nav =()=>{
         <div class="flex bg-white justify-center items-center rounded-b-full w-[10%] shadow-xl relative">
             
             <div class="flex justify-center w-[68%] h-[95%]">
-                <img loading="lazy" src={logo} onClick={desplegarMenu} alt="Logo"/>
+                <Link to={"/Login"}><img loading="lazy" src={logo} onClick={desplegarMenu} alt="Logo"/></Link>
+                
             </div>
             <nav className="">
                 <ul loading="lazy" class={menu}>
