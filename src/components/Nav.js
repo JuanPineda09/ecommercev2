@@ -2,7 +2,7 @@ import React from 'react';
 import logo from "../Utils/Logo.svg";
 import purchaseCar from "../Utils/cart-solid-240 1.svg";
 import user from "../Utils/bxs-user-circle.svg"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 const Nav =()=>{
@@ -19,13 +19,22 @@ const Nav =()=>{
         setMenuEncendido(!menuEncendido)
     }
 
+  /*   useEffect(() => {
+        window.addEventListener("scroll", desplegarMenu);
+
+        // Limpieza del efecto
+        return () => {
+            window.removeEventListener("scroll", desplegarMenu);
+        };
+    }, [menuEncendido]); */
+
     return(
     <>
         <header class="w-full h-[10%] flex fixed top-0 p-0 justify-center bg-opacity-100 ">
         <div class="flex bg-white justify-center items-center rounded-b-full w-[10%] shadow-xl relative">
             
             <div class="flex justify-center w-[68%] h-[95%]">
-                <img loading="lazy" src={logo} class="" onClick={desplegarMenu} alt="Logo"/>
+                <img loading="lazy" src={logo} onClick={desplegarMenu} alt="Logo"/>
             </div>
             <nav className="">
                 <ul loading="lazy" class={menu}>
