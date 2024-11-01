@@ -1,5 +1,5 @@
 module.exports = {
     api: {
-        baseURL: "http://localhost:4000"
+        baseURL: "https://backend-ecommerce-fdb.vercel.app/?vercelToolbarCode=jqB169TofhtiNRl"
     }
 }

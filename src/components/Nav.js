@@ -35,15 +35,14 @@ const Nav =()=>{
         <div class="flex bg-white justify-center items-center rounded-b-full w-[10%] shadow-xl relative">
             
             <div class="flex justify-center w-[68%] h-[95%]">
-                <Link to={"/Login"}><img loading="lazy" src={logo} onClick={desplegarMenu} alt="Logo"/></Link>
-                
+            <img loading="lazy" src={logo} onClick={desplegarMenu} alt="Logo"/>
             </div>
             <nav className="">
                 <ul loading="lazy" class={menu}>
                     <li class="w-full flex flex-row justify-center items-center rounded-t-3xl hover:bg-[#f2f2f2] hover:border-b-[1px] hover:border-gray-400">
-                        <a href="productos.html">
-                            <img loading="lazy" class="hover:scale-105" src={user}  alt="PurchaseCar"/>
-                        </a>
+                        <Link to={"/Login"}>
+                        <img loading="lazy" class="hover:scale-105" src={user}  alt="PurchaseCar"/>
+                        </Link>
                         <a href="productos.html">
                             <img loading="lazy" class="hover:scale-105" src={purchaseCar}  alt="PurchaseCar"/>
                         </a>
