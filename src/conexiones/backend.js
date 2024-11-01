@@ -1,5 +1,5 @@
 module.exports = {
     api: {
-        baseURL: "http://localhost:4000"
+        baseURL: "https://vercel.com/api/toolbar/link/backend-ecommerce-fdb.vercel.app?via=deployment-domains-list&p=1&page=/"
     }
 }
