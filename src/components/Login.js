@@ -36,10 +36,12 @@ const Login = () => {
                       </div>
                       <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">¿Olvidaste tu contraseña?</a>
                   </div>
-                  <Link to={"/Crear-Cuenta"} class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" >Sign in</Link>
-                  <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                      Dont have an account yet? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+                 <p></p>
+                  <p class="text-sm text-center font-light text-gray-500 dark:text-gray-400">
+                      Dont have an account yet? 
+                      
                   </p>
+                  <Link to={"/crear-cuenta"}><p class=" text-gray bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm  text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign up</p></Link>
               </form>
           </div>
       </div>
