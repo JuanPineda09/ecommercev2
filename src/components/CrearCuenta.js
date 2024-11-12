@@ -12,10 +12,10 @@ const CrearCuenta = () => {
       email: '',
       password: '',
       confirmar: '',
-      idRole: '',
+      idRole: '2',
     });
   
-    const { idUsuario, nombre, email, password, confirmar, idRole} = usuario;
+    const { idUsuario, nombre, email, password, confirmar} = usuario;
   
     const onChange = (e) =>{
       setUsuario({
@@ -35,7 +35,7 @@ const CrearCuenta = () => {
           nombre: usuario.nombre,
           email: usuario.email,
           password: usuario.password,
-          idRole: usuario.idRole,
+          idRole: '2',
         }
         console.log(data);
         const response = await crud.POST(`/api/users`, data);
@@ -53,7 +53,7 @@ const CrearCuenta = () => {
             email: '',
             password: '',
             confirmar: '',
-            idRole:'',
+            idRole:'2',
           })
           //redireccionar pantalla login
           navigate("/login");
@@ -128,7 +128,7 @@ const CrearCuenta = () => {
               value={confirmar}
               onChange={onChange}/>
               
-              <label className='uppercase text-gray-600 block text-xl font-bold'>rol</label>
+              {/* <label className='uppercase text-gray-600 block text-xl font-bold'>rol</label>
               <input
               id="idRole"
               name="idRole"
@@ -137,7 +137,7 @@ const CrearCuenta = () => {
               className='w-full mt-3 p-3 border rounded-lg bg-gray-50'
               value={idRole}
               onChange={onChange}
-              />
+              /> */}
 
               <div className='pt-5'>
               <input

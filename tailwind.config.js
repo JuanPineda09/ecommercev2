@@ -3,7 +3,8 @@ module.exports = {
     theme: {
       extend: {
         colors: {
-            'azullemuzas': "#00C2D6"
+            'azullemuzas': "#00C2D6",
+            'azullemuzas-100': "#6ddeed"
         },
         backgroundImage: {
             'img-home': "linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),url('Utils/HOME.svg')"
