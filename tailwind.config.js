@@ -20,6 +20,10 @@ module.exports = {
             '100%': { opacity: '1', transform: 'translateY(0%)'}, 
           },
         },
+        gridTemplateColumns: {
+          // Simple 16 column grid
+          '2': 'repeat(2, minmax(0, 50px))',
+        }
       },
     },
     plugins: [],

@@ -13,7 +13,7 @@ const Nav =()=>{
 
     const desplegarMenu = () =>{
         if(!menuEncendido){
-            setMenu("origin-top-right-bottom absolute list-none top-16 left-0 w-50% rounded-3xl bg-[#f2f2f2]/70   animate-menu  shadow-2xl");
+            setMenu(" absolute list-none rigth-0 w-50% rounded-3xl bg-[#f2f2f2]/70   animate-menu  shadow-2xl");
         }else{
             setMenu("hidden");
         }
@@ -31,15 +31,16 @@ const Nav =()=>{
 
     return(
     <>
-        <header class="w-full h-[10%] flex fixed top-0 p-0 justify-center bg-opacity-100 ">
-        <div class="flex bg-white justify-center items-center rounded-b-full w-[10%] shadow-xl relative">
+        <header class="w-full flex fixed justify-center items-center flex-col bg-opacity-100 ">
+        <div class="h-[10%] flex bg-white justify-center items-center rounded-b-full w-[10%] shadow-xl relative  hover:scale-105 hover:duration-300 hover:ease-out">
             
-            <div class="flex justify-center w-[68%] h-[95%]">
+            <div class="flex justify-center items-center w-[68%] h-[95%]">
             <img loading="lazy" src={logo} onClick={desplegarMenu} alt="Logo"/>
             </div>
-            <nav className="">
+        </div>
+        <nav className="w-full h-full flex justify-end">
                 <ul loading="lazy" class={menu}>
-                    <li class="w-full flex flex-row justify-center items-center rounded-t-3xl hover:bg-[#f2f2f2] hover:border-b-[1px] hover:border-gray-400">
+                    <li class="w-full  flex flex-row justify-center items-center rounded-t-3xl hover:bg-[#f2f2f2] hover:border-b-[1px] hover:border-gray-400">
                         <Link to={"/Login"}>
                         <img loading="lazy" class="hover:scale-105" src={user}  alt="PurchaseCar"/>
                         </Link>
@@ -54,7 +55,6 @@ const Nav =()=>{
                     
                 </ul>
             </nav>
-        </div>
     </header>
     </>
 );

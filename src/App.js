@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import CrearCuenta from './components/CrearCuenta';
 import DashboardAdmin from './components/DashboardAdmin';
+import Categorias from './components/adminComponents/Categorias';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/login" exact element={<Login/>} />
         <Route path="/Crear-Cuenta" exact element={<CrearCuenta/>} />
         <Route path="/Dashboard-Administracion" exact element={<DashboardAdmin/>} />
+        <Route path="/Categorias" exact element={<Categorias/>} />
       </Routes>
     </Router>
   );
