@@ -43,7 +43,7 @@ const Home =()=>{
     <section class="w-full flex justify-center items-center bg-azullemuzas" id="Section3">
 
         
-            <ul class="w-[98%] h-[80%] list-none flex flex-row flex-nowrap overflow-scroll justify-start items-center max-sm:w-[100%]">
+            <ul class="w-[98%] h-[80%] list-none flex flex-row justify-start items-center max-sm:w-[100%]">
             {categorias.map((category) => (
                 <li key={category.idCategoria} class="my-[10px] mx-[20px]">
                     <div class="bg-white w-48 h-48 rounded-full flex flex-col justify-center items-center shadow-md shadow-slate-600 max-sm:w-24 max-sm:h-24">
@@ -54,44 +54,6 @@ const Home =()=>{
                     <p class="text-center mt-5 max-sm:text-[12px]">{category.descripcion}</p>
                 </li>
             ))}
-                
-                
-                <li class="my-[10px] mx-[20px]">
-                    <div class="bg-white w-48 h-48 rounded-full flex flex-col justify-center items-center shadow-md shadow-slate-600 max-sm:w-24 max-sm:h-24">
-                        <a href="productos.html" class="w-[90%] h-[90%] rounded-full bg-[length:100%] object-cover"></a>
-                    </div>
-                    <p class="text-center mt-5 max-sm:text-[15px]">MUJER</p>
-                </li>
-                <li class="my-[10px] mx-[20px]">
-                    <div class="bg-white w-48 h-48 rounded-full flex flex-col justify-center items-center shadow-md shadow-slate-600 max-sm:w-24 max-sm:h-24">
-                        <a href="productos.html" class="w-[90%] h-[90%] rounded-full bg-[length:100%] object-cover"></a>
-                    </div>
-                    <p class="text-center mt-5 max-sm:text-[15px]">HOGAR</p>
-                </li>
-                <li class="my-[10px] mx-[20px]">
-                    <div class="bg-white w-48 h-48 rounded-full flex flex-col justify-center items-center shadow-md shadow-slate-600 max-sm:w-24 max-sm:h-24">
-                        <a href="productos.html" class="w-[90%] h-[90%] rounded-full bg-[length:100%] object-cover"></a>
-                    </div>
-                    <p class="text-center mt-5 max-sm:text-[15px]">CONJUNTOS</p>
-                </li>
-                <li class="my-[10px] mx-[20px]">
-                    <div class="bg-white w-48 h-48 rounded-full flex flex-col justify-center items-center shadow-md shadow-slate-600 max-sm:w-24 max-sm:h-24">
-                        <a href="productos.html" class="w-[90%] h-[90%] rounded-full bg-[length:100%] object-cover"></a>
-                    </div>
-                    <p class="text-center mt-5 max-sm:text-[15px]">ACCESORIOS</p>
-                </li>
-                <li class="my-[10px] mx-[20px]">
-                    <div class="bg-white w-48 h-48 rounded-full flex flex-col justify-center items-center shadow-md shadow-slate-600 max-sm:w-24 max-sm:h-24">
-                        <a href="productos.html" class="w-[90%] h-[90%] rounded-full bg-[length:100%] object-cover"></a>
-                    </div>
-                    <p class="text-center mt-5 max-sm:text-[15px]">BELLEZA</p>
-                </li>
-                <li class="my-[10px] mx-[20px]">
-                    <div class="bg-white w-48 h-48 rounded-full flex flex-col justify-center items-center shadow-md shadow-slate-600 max-sm:w-24 max-sm:h-24">
-                        <a href="productos.html" class="w-[90%] h-[90%] rounded-full bg-[length:100%] object-cover"></a>
-                    </div>
-                    <p class="text-center mt-5 max-sm:text-[15px]">SALUD</p>
-                </li>
             </ul>
     </section>
     <Footer/>
