@@ -70,90 +70,49 @@ const CrearCuenta = () => {
   
   
       return(
-        <main className='container mx-auto mt-5 md:mt-12 p-5 md:flex md:justify-center'>
-        <div className='md:w-2/3 lg:w-2/5 border-2 rounded-3xl pt-6 px-4'>
-          <Link to={"/login"}>
-            <img className='hover:scale-90' src='https://res.cloudinary.com/dhykdpajo/image/upload/v1670863094/Proyecto%20MinTic/arrow-back-regular-36_kkhqxf.png' alt='atras'></img>
-          </Link>
-          <h1 className="flex justify-center bg-gradient-to-r from-linio-primary to-linio-secondary py-6 drop-shadow-lg bg-clip-text font-display text-5xl tracking-tight text-transparent">REGISTRO</h1>
-          <form onSubmit={onSubmit} className='my-10 bg-white shadow-orange-500 rounded-lg px-10'>
-            <div className='my-5'>
-            <label className='uppercase text-gray-600 block text-xl font-bold'>Cedula</label>
-              <input
-              id="idUsuario"
-              name="idUsuario"
-              type="number"
-              placeholder="Digite su numero de cedula"
-              className='w-full mt-3 p-3 border rounded-lg bg-gray-50'
-              value={idUsuario}
-              onChange={onChange}
-              />
-
-            <label className='uppercase text-gray-600 block text-xl font-bold'>Nombre</label>
-              <input
-              id="nombre"
-              name="nombre"
-              type="nombre"
-              placeholder="Digite su nombre"
-              className='w-full mt-3 p-3 border rounded-lg bg-gray-50'
-              value={nombre}
-              onChange={onChange}
-              />
-              <label className='uppercase text-gray-600 block text-xl font-bold pt-3'>Email</label>
-              <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email de Registro"
-              className='w-full mt-3 p-3 border rounded-lg bg-gray-50'
-              value={email}
-              onChange={onChange}/>
-              
-              <label className='uppercase text-gray-600 block text-xl font-bold pt-3'>Password</label>
-              <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Password"
-              className='w-full mt-3 p-3 border rounded-lg bg-gray-50'
-              value={password}
-              onChange={onChange}/>
-              <label className='uppercase text-gray-600 block text-xl font-bold pt-3'>Confirmar</label>
-              <input
-              type="password"
-              id="confirmar"
-              name="confirmar"
-              placeholder="Confirme su Password"
-              className='w-full mt-3 p-3 border rounded-lg bg-gray-50'
-              value={confirmar}
-              onChange={onChange}/>
-              
-              {/* <label className='uppercase text-gray-600 block text-xl font-bold'>rol</label>
-              <input
-              id="idRole"
-              name="idRole"
-              type="number"
-              placeholder="Digite su nombre"
-              className='w-full mt-3 p-3 border rounded-lg bg-gray-50'
-              value={idRole}
-              onChange={onChange}
-              /> */}
-
-              <div className='pt-5'>
-              <input
-                type="submit"
-                value="Crear Cuenta"
-                className="bg-gradient-to-r from-linio-primary to-linio-secondary py-3 w-full drop-shadow-lg text-white uppercase font-bold rounded hover:cursor-pointer "/>
-              </div>
-              
-            </div>
-          </form>
-  
-  
-  
-  
-        </div>
-       </main>     
+        <>
+        <section class="py-40 bg-gray-50 h-[200%]">
+  <div class=" flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+    <Link to={"/"} class="flex items-center mb-6 text-3xl font-semibold text-gray-900 dark:text-white">
+    <img class="w-10 h-10 mr-2" src="https://res.cloudinary.com/dhykdpajo/image/upload/v1731373159/Proyecto%20Lemuzas/Logo_jdtlyj.svg" alt="logo"></img>
+          Lemuzas    </Link>
+      <div class="w-full h-{100%}  bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+          <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+              <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
+                  Crea tu cuenta
+              </h1>
+              <form class="space-y-4 md:space-y-6" onSubmit={onSubmit}>
+                  <div>
+                      <label for="cedula" class="block mb-2 text-sm font-medium text-gray-900 ">CEDULA</label>
+                      <input type="number" name="idUsuario" id="idUsuario" placeholder="Digita tu cedula" value={idUsuario} onChange={onChange} class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg   focus:text-white focus:bg-azullemuzas focus:ease-in focus:duration-300 focus:placeholder-white" required></input>
+                  </div>
+                  <div>
+                      <label for="nombre" class="block mb-2 text-sm font-medium text-gray-900 ">NOMBRE</label>
+                      <input type="text" name="nombre" id="nombre" placeholder="Digita tu Nombre" value={nombre} onChange={onChange} class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg   focus:text-white focus:bg-azullemuzas focus:ease-in focus:duration-300 focus:placeholder-white" required></input>
+                  </div>
+                  <div>
+                      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">CORREO</label>
+                      <input type="email" name="email" id="email" placeholder="example@dominio.com" value={email} onChange={onChange} class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg   focus:text-white focus:bg-azullemuzas focus:ease-in focus:duration-300 focus:placeholder-white" required></input>
+                  </div>
+                  
+                  <div>
+                      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CONTRASEÑA</label>
+                      <input type="password" name="password" id="password" placeholder="Contraseña" value={password} onChange={onChange} class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg  focus:text-white focus:bg-azullemuzas focus:ease-in focus:duration-300 focus:placeholder-white" required=""></input>
+                  </div>
+                  <div>
+                      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CONFIRMA TU CONTRASEÑA</label>
+                      <input type="password" name="confirmar" id="confirmar" placeholder="Contraseña" value={confirmar} onChange={onChange} class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg  focus:text-white focus:bg-azullemuzas focus:ease-in focus:duration-300 focus:placeholder-white" required=""></input>
+                  </div>
+                    <input
+                        type="submit"
+                        value="Crea Cuenta"
+                        className="bg-azullemuzas w-full py-3 text-white font-bold rounded-lg hover:cursor-pointer hover:scale-95 hover:ease-in hover:duration-300"/>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+        </> 
       );
   }
   
