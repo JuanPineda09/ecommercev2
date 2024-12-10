@@ -58,7 +58,7 @@ return(
       </div>
       
       {/* NAVBAR */}
-      <div className='obsolute right-0  w-[80%] h-14 bg-white shadow-md flex'>
+      <div className='absolute z-10 right-0  w-4/5 h-14 bg-white shadow-md flex'>
         <div className='w-[80%] h-full flex items-center justify-center'>
           <form className='w-[30%] flex bg-stone-100 rounded-full hover:border-2 hover:ease-out hover:duration-100'>
             <img src={imageSearch} className='pl-4 pr-1 py-1'></img>
