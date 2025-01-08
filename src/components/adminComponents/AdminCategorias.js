@@ -1,4 +1,5 @@
 import React from 'react';
+import { Outlet, NavLink } from 'react-router-dom';
 
 const AdminCategorias =()=>{
     return(
@@ -26,6 +27,10 @@ const AdminCategorias =()=>{
                 <td className='w-[10%]'>Acciones</td>
             </tr>
         </table>
+
+        <NavLink to='/Dashboard-Administracion/AdminCategoriasCrear'>Crear Categoria</NavLink>
+        <Outlet/>
+
         </section>
     </>
 );

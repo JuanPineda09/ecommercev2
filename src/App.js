@@ -11,6 +11,7 @@ import AdminUsuarios from './components/adminComponents/AdminUsuarios';
 import AdminOfertas from './components/adminComponents/AdminOfertas';
 import AdminPedidos from './components/adminComponents/AdminPedidos';
 import AdminVentas from './components/adminComponents/AdminVentas';
+import AdminCategoriasCrear from './components/adminComponents/AdminCategoriasComponents/AdminCategoriasCrear';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="AdminHome" exact element={<AdminHome/>}/>
           <Route path="AdminUsuarios" exact element={<AdminUsuarios/>}/>
           <Route path="AdminCategorias" exact element={<AdminCategorias/>}/>
+            <Route path="AdminCategoriasCrear" exact element={<AdminCategoriasCrear/>}/>
           <Route path="AdminProductos" exact element={<AdminProductos/>}/>
           <Route path="AdminOfertas" exact element={<AdminOfertas/>}/>
           <Route path="AdminPedidos" exact element={<AdminPedidos/>}/>
