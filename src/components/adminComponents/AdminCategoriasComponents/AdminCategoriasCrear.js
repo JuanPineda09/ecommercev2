@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import {useNavigate} from "react-router-dom";
 import crud from '../../../conexiones/crud';
 
+
+
+
 const AdminCategoriasCrear =()=>{
 
     const navigate = useNavigate();
@@ -12,6 +15,7 @@ const AdminCategoriasCrear =()=>{
         imagen:null,
     });
 
+
     const {nombre, descripcion, imagen} = categoria;
 
     const handleSubmit = async (e) => {
@@ -21,26 +25,44 @@ const AdminCategoriasCrear =()=>{
         formData.append('nombre', nombre);
         formData.append('descripcion', descripcion);
         formData.append('imagen', imagen);
-        try{
-            const response = await crud.POST('/api/categorias', {method: 'POST', body: formData,});
-            if(!response.ok){
-                throw new Error('Error al crear la categoria');
+      
+        try {
+          const response = await crud.POST('/api/categorias', { method: 'POST', body: formData });
+      
+          if (!response.ok) {
+            if (response.status === 400) {
+              console.error('Error en la solicitud: ');
+              // Try parsing the error response as JSON (assuming the server sends JSON for errors)
+              const errorData = await response.json();
+              if (errorData) {
+                console.error('Error details:', errorData);
+                // You can display specific error messages to the user based on the errorData
+              } else {
+                console.error('Error: Could not parse error response as JSON');
+              }
+            } else {
+              console.error('Error del servidor:', response.status);
+              // You can display a generic server error message to the user
             }
+          } else {
             const data = await response.json();
             console.log(data);
             setCategoria({ nombre: '', descripcion: '', imagen: null });
             navigate("/Dashboard-Administracion/AdminCategorias");
-        }catch (error){
-            console.error(error);
+          }
+        } catch (error) {
+          console.error('Error desconocido: ', error);
+          // Show a generic error message to the user
         }
-    };
-        
+      };
+
+
     const onChange = (e) =>{
         setCategoria({
             ...categoria,
             [e.target.name]: e.target.value
         })
-    }
+    } 
 
     return(
     <>

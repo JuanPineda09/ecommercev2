@@ -60,7 +60,7 @@ const Login = () => {
               </h1>
               <form class="space-y-4 md:space-y-6" onSubmit={onSubmit}>
                   <div>
-                      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Ingresa tu correo</label>
+                      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white ">Ingresa tu correo</label>
                       <input type="email" name="email" id="email" placeholder="example@dominio.com" value={email} onChange={onChange} class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg   focus:text-white focus:bg-azullemuzas focus:ease-in focus:duration-300 focus:placeholder-white" required></input>
                   </div>
                   <div>
