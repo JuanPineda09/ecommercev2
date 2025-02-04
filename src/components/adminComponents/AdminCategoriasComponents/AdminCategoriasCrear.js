@@ -50,11 +50,17 @@ const uploadFile = (e) =>{
     formData.append('descripcion', descripcion);
     formData.append('imagen', imagen);
 
+    console.log(nombre)
+    console.log(descripcion)
+    console.log(imagen)
+    console.log(imagen instanceof File)
+
     try {
-      const response = await crud.POST('/api/categorias',formData)
+      const response = await crud.POST('/api/categorias',
+        formData)
+      console.log(response);
 
-      console.log(response)
-
+      
       setCategoria({
         nombre:'',
         descripcion:'',
@@ -74,7 +80,7 @@ const uploadFile = (e) =>{
         <section className='absolute w-4/5 h-[91.6%] bg-cyan-50 right-0 top-14 flex flex-col overflow-scroll'>
         <h3 className="font-semibold text-azullemuzas text-center my-10 text-3xl mb-2">Modulo para la creación de Categorias</h3>
         
-        <form enctype ="multipart/form-data" className='p-10 rounded-3xl shadow  border-gray-300 bg-white flex flex-col w-2/6 mx-auto mt-10'>
+        <form className='p-10 rounded-3xl shadow  border-gray-300 bg-white flex flex-col w-2/6 mx-auto mt-10'>
             <label className='mb-2 block text-sm font-medium text-gray-900 dark:text-white'>Nombre de la Categoria</label>
             <input className='mb-5 block w-full p-2.5 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg  focus:text-white focus:bg-azullemuzas focus:ease-in focus:duration-300 focus:placeholder-white' type='text' id='nombre' name='nombre' value={nombre} onChange={categoriaOnchange}></input>
             <label className='mb-2 block text-sm font-medium text-gray-900 dark:text-white'>Descripción de la Categoria</label>

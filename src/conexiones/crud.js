@@ -36,12 +36,21 @@ class crud {
 
         const data = {
             method: 'POST',
-            body: JSON.stringify(body),
+            body: body,
+            // body: JSON.stringify(body), Modificada para verificar el formdata
             headers: {
-                'Content-Type':'application/json',
+                // 'Content-Type':'application/json',
                 'x-auth-token': bearer
             }
-        }
+        };
+
+
+        if (!(body instanceof FormData)) {
+            data.body = JSON.stringify(body);
+            data.headers['Content-Type'] = 'application/json';
+          }
+
+
         const url = `${back.api.baseURL}${resource}`
         let response = (await (await fetch(url, data)).json())
         return response
