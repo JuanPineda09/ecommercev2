@@ -18,34 +18,34 @@ const AdminCategorias =()=>{
 
     return(
     <>
-        <section className='bg-cyan-50 z-0 absolute w-4/5 h-[91.6%] right-0 top-14 flex flex-col overflow-scroll'>
-        <h3 className="font-bold text-azullemuzas text-center my-10  text-2xl mb-2">MODULO DE CATEGORIAS</h3>
-        <table className='w-[90%]  bg-white  rounded-2xl text-center drop-shadow-lg mx-auto my-8'>
+        <section className='bg-cyan-50 z-0 absolute w-4/5 h-[90%] right-0 top-14 flex flex-col overflow-hidden'>
+        <h3 className="font-bold text-azullemuzas text-center mt-8 text-2xl">MODULO DE CATEGORIAS</h3>
+        <table className='w-[90%] h-4/5 block overflow-y-auto bg-white  rounded-2xl text-center drop-shadow-lg mx-auto my-4'>
 
-            <tr className='border-azullemuzas border-b-[2px]'>
-                <th>Id</th>
-                <th>Categoria</th>
-                <th>Descripcion</th>
-                <th>Imagen</th>
-                <th>Fecha de Creación</th>
-                <th>Acciones</th>
+            <tr className='border-azullemuzas border-b-[2px] w-full'>
+                <th className="text-lg">Id</th>
+                <th className="text-lg">Categoria</th>
+                <th className="text-lg">Descripcion</th>
+                <th className="text-lg">Imagen</th>
+                <th className="text-lg">Fecha de Creación</th>
+                <th className="text-lg">Acciones</th>
             </tr>
             {showCategories.map(category=>(
-                <tr key={category.idCategoria}>
+                <tr key={category.idCategoria} >
                 <td className='w-[10%]'>{category.idCategoria}</td>
                 <td className='w-[15%]'>{category.nombre}</td>
                 <td className='w-1/4'>{category.descripcion}</td>
-                <td className='w-[30%]'>
-                    <img className='w-full h-full object-cover' src={`http://localhost:4000/${category.imagen}`}></img>
+                <td className='w-[20%] h-[150px]'>
+                    <img className='w-48 h-48 object-fill' src={`http://localhost:4000/${category.imagen}`}></img>
                 </td>
-                <td className='w-[10%]'>Fecha de Creación</td>
+                <td className='w-[10%]'>{category.creacion}</td>
                 <td className='w-[10%]'>Acciones</td>
                 </tr>
             ))}
             
         </table>
 
-        <NavLink to='/Dashboard-Administracion/AdminCategoriasCrear'>Crear Categoria</NavLink>
+        <NavLink to='/Dashboard-Administracion/AdminCategoriasCrear' className="flex justify-center h-[45px] text-white bg-azullemuzas mx-[75px] py-[10px] rounded-3xl">Crear Categoria</NavLink>
         <Outlet/>
 
         </section>
